@@ -271,9 +271,9 @@ function App() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-2"></h3>
               <ul className="space-y-1">
-                <li>• <strong>El Alto:</strong> </li>
+                <li>• <strong></strong> </li>
                 <li>• <strong>Cochabamba:</strong> </li>
-                <li>• <strong>Resto del país:</strong> </li>
+                <li>• <strong></strong> </li>
               </ul>
             </div>
             <div>
