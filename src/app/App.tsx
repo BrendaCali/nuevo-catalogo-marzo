@@ -296,7 +296,6 @@ function App() {
         product={selectedProduct}
         open={modalOpen}
         onClose={handleCloseModal}
-        whatsappNumber="59167519672"
       />
     </div>
   );
