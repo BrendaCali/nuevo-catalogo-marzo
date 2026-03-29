@@ -29,6 +29,8 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
     );
   };
 
+  const whatsappUrl = `https://wa.me/59167519672?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(product.name)}`;
+
   return (
     <Dialog open={open} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -131,13 +133,21 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
             </div>
           )}
 
-          <Button 
-            onClick={onClose}
-            className="w-full"
-            disabled={product.outOfStock}
-          >
-            {product.outOfStock ? 'No disponible' : 'Contactar para comprar'}
-          </Button>
+          {/* Botón de contacto */}
+          {product.outOfStock ? (
+            <Button className="w-full" disabled>
+              No disponible
+            </Button>
+          ) : (
+            
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block text-center bg-gray-900 text-white py-3 px-6 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+            >
+              Contactar para comprar
+            </a>
+          )}
         </div>
       </DialogContent>
     </Dialog>
