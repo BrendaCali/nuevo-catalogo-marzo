@@ -10,7 +10,7 @@ function App() {
     {
       id: 1,
       name: 'Reloj Plateado y Accesorios',
-      price: 125,
+      price: 110,
       shortDescription: 'Set completo de reloj de metal con accesorios incluidos en caja de regalo',
       fullDescription: 'Set completo de reloj y accesorios plateados. Material de metal de alta calidad. Incluye reloj de pulsera, cadena estilo cubana, pulsera y collar. Perfecto como regalo. Viene en una elegante caja de presentación negra.',
       images: [
@@ -45,7 +45,7 @@ function App() {
         'Longitud de la Correa: 245 mm',
         'Peso: 32 g',
         'Incluye caja de regalo negra',
-        'Colores disponibles: A - B - C - D'
+        'Colores disponibles: negro y cafe '
       ]
     },
     {
@@ -94,7 +94,7 @@ function App() {
     {
       id: 5,
       name: 'Luz LED de Techo con Panel Solar',
-      price: 115,
+      price: 100,
       shortDescription: 'Lámpara LED solar de 32 perlas con control remoto y temporizador',
       fullDescription: 'Lámpara LED de techo con panel solar integrado. 32 LEDs de alta luminosidad. Control remoto incluido con función de temporizador. Ideal para espacios sin electricidad o para ahorrar energía.',
       images: [
@@ -115,7 +115,7 @@ function App() {
     {
       id: 6,
       name: 'Multi Dispensador de Alimentos',
-      price: 165,
+      price: 120,
       shortDescription: 'Dispensador de plástico con 6 compartimentos y capacidad de 10kg',
       fullDescription: 'Dispensador múltiple de alimentos con 6 compartimentos independientes. Capacidad total de 10kg. Perfecto para organizar cereales, granos, snacks y más. Mantiene los alimentos frescos y protegidos.',
       images: [
@@ -207,7 +207,7 @@ function App() {
     {
       id: 10,
       name: 'Verdulero Metálico de Cocina',
-      price: 220,
+      price: 225,
       shortDescription: 'Organizador de acero al carbono con 5 canastas y repisa superior',
       fullDescription: 'Verdulero metálico de 5 niveles con canastas y repisa superior. Estructura de acero al carbono resistente. Perfecto para organizar frutas, verduras y otros alimentos en la cocina. Diseño vertical que ahorra espacio.',
       images: [
@@ -221,7 +221,7 @@ function App() {
         'Diseño vertical',
         'Ahorra espacio',
         'Estructura resistente',
-        'Colores disponibles: Negro - Blanco'
+        'Colores disponibles: Negro  '
       ]
     }
   ];
