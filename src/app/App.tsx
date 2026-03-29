@@ -242,7 +242,7 @@ function App() {
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <h1 className="text-3xl font-bold text-gray-900">Catálogo de Productos</h1>
-          <p className="text-gray-600 mt-1">Importación vía marítima grupal</p>
+          <p className="text-gray-600 mt-1"></p>
           <p className="text-gray-600">Tel/WhatsApp: 67519672 - 67508791</p>
         </div>
       </header>
@@ -265,26 +265,25 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="space-y-4 text-sm text-gray-600">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">IMPORTACIONES MARÍTIMAS</h3>
-              <p className="mb-3">Importación vía marítima grupal - Pago a proveedores, logística y despacho de aduana</p>
+              <h3 className="font-semibold text-gray-900 mb-2"></h3>
+              <p className="mb-3"></p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">ENTREGAS</h3>
+              <h3 className="font-semibold text-gray-900 mb-2"></h3>
               <ul className="space-y-1">
-                <li>• <strong>El Alto:</strong> Retiro en almacén</li>
-                <li>• <strong>Cochabamba:</strong> Entrega a coordinación</li>
-                <li>• <strong>Resto del país:</strong> Envío con costo adicional (solo transportadora)</li>
+                <li>• <strong>El Alto:</strong> </li>
+                <li>• <strong>Cochabamba:</strong> </li>
+                <li>• <strong>Resto del país:</strong> </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">TÉRMINOS Y CONDICIONES</h3>
+              <h3 className="font-semibold text-gray-900 mb-2"></h3>
               <ul className="space-y-1">
-                <li>• Primer pago: 60% - Segundo pago: 40%</li>
-                <li>• Se comunicará con una semana de anticipación para el segundo pago</li>
-                <li>• No se admiten reembolsos</li>
-                <li>• 7 días para recoger mercancía (80 Bs/día de almacén después)</li>
-                <li>• Organización, embalaje y pruebas: 5-10 días post desaduanizaje</li>
-                <li>• Fecha estimada de llegada puede variar por fuerza mayor (tránsito marítimo, terrestre y desaduanizaje)</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                
+                <li></li>
               </ul>
             </div>
             <div className="pt-4 border-t">
