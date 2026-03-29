@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
@@ -18,18 +18,22 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
   if (!product) return null;
 
   const handlePrevImage = () => {
-    setCurrentImageIndex((prev) =>
+    setCurrentImageIndex((prev) => 
       prev === 0 ? product.images.length - 1 : prev - 1
     );
   };
 
   const handleNextImage = () => {
-    setCurrentImageIndex((prev) =>
+    setCurrentImageIndex((prev) => 
       prev === product.images.length - 1 ? 0 : prev + 1
     );
   };
 
-  const whatsappUrl = `https://wa.me/59167519672?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(product.name)}`;
+  const handleWhatsAppContact = () => {
+    const message = `Hola, me interesa el producto: ${product.name} - ${product.price} Bs`;
+    const whatsappUrl = `https://wa.me/59167519672?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
@@ -51,7 +55,7 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
               alt={product.name}
               className="w-full h-full object-cover"
             />
-
+            
             {product.images.length > 1 && (
               <>
                 <button
@@ -68,7 +72,7 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>
-
+                
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                   {product.images.map((_, index) => (
                     <button
@@ -93,8 +97,8 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
                   className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                    index === currentImageIndex
-                      ? 'border-green-600'
+                    index === currentImageIndex 
+                      ? 'border-green-600' 
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
@@ -133,21 +137,13 @@ export function ProductModal({ product, open, onClose }: ProductModalProps) {
             </div>
           )}
 
-          {/* Botón contacto */}
-          {product.outOfStock ? (
-            <Button className="w-full" disabled>
-              No disponible
-            </Button>
-          ) : (
-            
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block text-center bg-green-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-green-700 transition-colors"
-            >
-              Contactar para comprar
-            </a>
-          )}
+          <Button 
+            onClick={handleWhatsAppContact}
+            className="w-full"
+            disabled={product.outOfStock}
+          >
+            {product.outOfStock ? 'No disponible' : 'Contactar para comprar'}
+          </Button>
         </div>
       </DialogContent>
     </Dialog>
